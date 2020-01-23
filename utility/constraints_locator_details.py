@@ -6,11 +6,15 @@
 import os
 
 app_url = "https://www.flipkart.com/"
-browsers_name = ("Chrome", "ChromeHeadless", "Firefox")
+browsers_name = ("chrome", "chromeheadless", "firefox")
+
 
 
 def SOLUTION_DICTIONARY():
 	print("SOLUTION_DICTIONARY is {}".format(os.getcwd()))
 	return os.getcwd()
+
+chrome_path=SOLUTION_DICTIONARY()+"//testdata//chromedriver.exe"
+firefox_path=SOLUTION_DICTIONARY()+"//testdata//geckodriver.exe"
 
 ## flipkart locators

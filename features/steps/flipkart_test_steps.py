@@ -7,9 +7,11 @@
 
 from behave import given,when,then
 from utility.logger_report_details import *
-
+from pages.home_page_details import *
 @given(u'the user opens Flipkart')
 def step_impl(context):
+    home_page=FlipkartHome(context)
+    assert True is home_page.open_application()
     pass
 
 
