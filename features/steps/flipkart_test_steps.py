@@ -10,20 +10,24 @@ from utility.logger_report_details import *
 from pages.home_page_details import *
 @given(u'the user opens Flipkart')
 def step_impl(context):
+    global home_page
     home_page=FlipkartHome(context)
     assert True is home_page.open_application()
+    assert True is home_page.close_home_popup()
     pass
 
 
 @when(u'the user navigates to "{sub_category}" options')
 def step_impl(context,sub_category):
     logging.info("User selects {} as sub category ".format(str(sub_category)))
+    assert True is home_page.get_electronic()
     pass
 
 
 @when(u'selects "{product_category}"')
 def step_impl(context,product_category):
     logging.info("User selects product is {} ".format(str(product_category)))
+    assert True is home_page.click_oppo()
     pass
 
 

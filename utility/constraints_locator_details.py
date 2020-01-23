@@ -18,3 +18,7 @@ chrome_path=SOLUTION_DICTIONARY()+"//testdata//chromedriver.exe"
 firefox_path=SOLUTION_DICTIONARY()+"//testdata//geckodriver.exe"
 
 ## flipkart locators
+login_popup=".mCRfo9>div>div>button"
+electronic_subcat="//span[text()='Electronics']"
+OPPO="//a[@title='OPPO']"
+oppo_page_label="//h1[text()='OPPO Mobile phones']"
