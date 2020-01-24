@@ -25,6 +25,17 @@ class WebHelpper(BasePage):
 		except Exception:
 			logging.error("Some error Occurred during find an element" + str(sys.exc_info()))
 			return None
+		pass
+	def we_find_elements(self,*locator):
+		try:
+			elms=self.Browser.find_elements(*locator)
+			if elms is not None:
+				return elms
+			else:
+				return None
+		except:
+			logging.error("Some error Occurred during find an element" + str(sys.exc_info()))
+			return None
 
 	def we_highlight_element(self,*locator):
 		try:
