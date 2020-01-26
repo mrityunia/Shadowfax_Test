@@ -87,7 +87,6 @@ def step_impl(context):
 	cart_details.dumy()
 	pass
 
-
 @when(u'the user clicks on net banking')
 def step_impl(context):
 	assert True is cart_details.select_netbanking()

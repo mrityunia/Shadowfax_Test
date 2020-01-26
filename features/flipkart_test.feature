@@ -7,7 +7,7 @@ Feature: Flipkart order placement
      When  the user navigates to "Electronics/Mobile" options
       And  selects "OPPO"
      Then product list page is opened
-     When  the user selects "OPPO A1K (Red, 32 GB)"
+     When  the user selects "OPPO A3s (Purple, 16 GB)"
       And  clicks on add to cart
       And the user navigates to Flipkart main page by clicking Home icon
       And the user navigates to cart page
