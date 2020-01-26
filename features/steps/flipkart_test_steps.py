@@ -7,6 +7,7 @@
 
 from behave import given,when,then
 from pages.home_page_details import *
+from pages.checkout_page_details import *
 @given(u'the user opens Flipkart')
 def step_impl(context):
 	global home_page
@@ -41,7 +42,8 @@ def step_impl(context):
 @when(u'the user selects "{product}"')
 def step_impl(context,product):
 	logging.info("User selects {} as a product ".format(str(product)))
-	oppo_mobile.get_oppo_mobile_by_name(product)
+	assert  True is oppo_mobile.get_oppo_mobile_by_name(product)
+	context.mobile_name = product
 
 
 
@@ -57,43 +59,49 @@ def step_impl(context):
 def step_impl(context):
 	assert True is home_page.go_to_cart_from_home()
 
-
-
 @then(u'the item is present in cart')
 def step_impl(context):
-	pass
-
+	global cart_details
+	cart_details = CartDetails(context=context)
+	assert True is cart_details.items_is_present(str(context.mobile_name))
 
 @when(u'the user clicks on place the order')
 def step_impl(context):
+
+	assert True is cart_details.place_order_from_cart()
 	pass
 
 
 @when(u'the user enters "{user_id}" and "{password}"')
 def step_impl(context,user_id,password):
+	assert True is cart_details.enter_id_password(user_id=user_id,password=password)
+	assert True is cart_details.select_deleviry_address()
 	pass
-
-
 @when(u'clicks on Submit')
 def step_impl(context):
+	assert True is cart_details.conf_order_summary()
 	pass
 
 @then(u'user navigates to payment options page')
 def step_impl(context):
+	cart_details.dumy()
 	pass
 
 
 @when(u'the user clicks on net banking')
 def step_impl(context):
+	assert True is cart_details.select_netbanking()
 	pass
 
 
 @when(u'selects bank as "{bank_name}"')
 def step_impl(context,bank_name):
 	logging.info("Select bank Name is {} ".format(str(bank_name)))
+	assert True is cart_details.select_bank(bank_name)
 	pass
 
 
 @then(u'user takes a screen shot of the page')
 def step_impl(context):
+	assert True is cart_details.payment_by_bank()
 	pass
