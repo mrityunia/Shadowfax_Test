@@ -20,8 +20,8 @@ Steps to Run
 6) Test result will show below like
 
 
-
 Test Configuration :
+1) You can run the test cases in Chrome and Firefox By changing the TAG, like Chrome, Firefox
 1)  you can change the mobile "OPPO A3s (Purple, 16 GB)" and select any mobile. it is dynamic in nature.
 2)  you can change the user id and password  ,Dynamic in nature.(Only minimum one address needs to be present. As there are no requirement given, that the reson is not implement)
 3)  you can choose any net banking . bank selection Dynamic in nature

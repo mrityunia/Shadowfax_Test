@@ -1,7 +1,6 @@
 Feature: Flipkart order placement
 
   @chrome
-  @debug
   Scenario: verify user is able to place an order through net banking
     Given the user opens Flipkart
      When  the user navigates to "Electronics/Mobile" options
